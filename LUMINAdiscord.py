@@ -81,7 +81,7 @@ async def on_member_join(member):
     if channel:
         await channel.send(f"Welcom {member.mention}! 🎉")
 
-@tasks.loop(minutes= 1)
+@tasks.loop(minutes= 30)
 async def send_random_message():
      channel = discord.utils.get(client.get_all_channels(), name="general-all-language")  
      if channel: 
